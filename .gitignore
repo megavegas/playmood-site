@@ -2,3 +2,5 @@
 .idea/
 *.apk
 !docs/downloads/*.apk
+
+!docs/downloads/*.ps1
