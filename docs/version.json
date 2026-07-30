@@ -1,10 +1,11 @@
 ﻿{
   "updatedAt": "2026-07-30",
   "mobile": {
-    "versionName": "1.0.56",
-    "versionCode": 57,
+    "versionName": "1.0.57",
+    "versionCode": 58,
     "apk": "downloads/playmood-mobile-latest.apk",
-    "fallback": "https://hamtaloans.com/mldy-update/"
+    "fallback": "https://hamtaloans.com/mldy-update/",
+    "airMousePc": "downloads/playmood-airmouse-pc.ps1"
   },
   "tv": {
     "versionName": "0.2.0",
