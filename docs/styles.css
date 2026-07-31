@@ -109,6 +109,39 @@ h1 em {
   gap: 0.8rem;
   margin-bottom: 0.9rem;
 }
+.dl-stats {
+  margin: 1.2rem 0 1rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius);
+  background: rgba(245, 197, 24, 0.08);
+  border: 1px solid rgba(245, 197, 24, 0.22);
+  max-width: 34rem;
+}
+.dl-total {
+  margin: 0;
+  font-family: var(--font-en);
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  font-weight: 800;
+  color: var(--amber);
+  line-height: 1.1;
+}
+.dl-message {
+  margin: 0.35rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.dl-sub {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--mist-dim);
+}
+.dl-tagline {
+  margin: 0.7rem 0 0;
+  font-size: 0.92rem;
+  color: var(--mist);
+  line-height: 1.75;
+}
 .btn {
   display: inline-flex;
   align-items: center;

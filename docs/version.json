@@ -1,8 +1,8 @@
 ﻿{
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-07-31",
   "mobile": {
-    "versionName": "1.0.59",
-    "versionCode": 60,
+    "versionName": "1.0.68",
+    "versionCode": 69,
     "apk": "downloads/playmood-mobile-latest.apk",
     "fallback": "https://hamtaloans.com/mldy-update/"
   },
