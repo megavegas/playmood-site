@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PlayMood — موزیک تو، حال تو</title>
-  <meta name="description" content="PlayMood پلیر موسیقی اندروید با تم تیره، کتابخانه محلی، TV و حالت خودرو. دانلود مستقیم APK." />
+  <title>PlayMood — Your music, your mood</title>
+  <meta name="description" content="PlayMood is an independent dark Android music player for local libraries, TV sync, Party, and Car — free, ad-free, direct APK." />
   <meta name="theme-color" content="#0B0D12" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,71 +20,75 @@
       <span class="brand-word">PLAYMOOD</span>
     </a>
     <nav>
-      <a href="#demo">پیش‌نمایش</a>
-      <a href="#features">قابلیت‌ها</a>
-      <a href="#products">محصولات</a>
-      <a href="#download">دانلود</a>
-      <a href="https://github.com/megavegas/playmood-site" target="_blank" rel="noopener">صفحه پروژه</a>
+      <a href="#demo" data-i18n="nav.preview">Preview</a>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#products" data-i18n="nav.products">Products</a>
+      <a href="#download" data-i18n="nav.download">Download</a>
+      <a href="https://github.com/megavegas/playmood-site" target="_blank" rel="noopener" data-i18n="nav.repo">Project page</a>
     </nav>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false">FA</button>
+      <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
+    </div>
   </header>
 
   <main>
     <section class="hero">
       <p class="eyebrow">Android · TV · Car</p>
-      <h1>موزیک تو،<br /><em>حال تو</em></h1>
-      <p class="lede">
-        پلیر تیره و سریع برای کتابخانهٔ محلی. پخش پس‌زمینه، مهمانی روی وای‌فای،
-        همگام با تلویزیون، و کنترل‌های بزرگ برای خودرو.
+      <h1 data-i18n-html="hero.title">Your music,<br /><em>your mood</em></h1>
+      <p class="lede" data-i18n="hero.lede">
+        A dark, fast player for your local library. Background playback, Wi‑Fi party queues,
+        TV sync, and big controls for the car.
       </p>
       <div class="cta-row" id="download">
-        <a class="btn primary" id="btn-mobile" href="downloads/playmood-mobile-latest.apk">دانلود موبایل (APK)</a>
-        <a class="btn ghost" href="https://hamtaloans.com/mldy-update/" target="_blank" rel="noopener">کانال بروزرسانی</a>
+        <a class="btn primary" id="btn-mobile" href="downloads/playmood-mobile-latest.apk" data-i18n="cta.mobile">Download mobile (APK)</a>
+        <a class="btn ghost" href="https://hamtaloans.com/mldy-update/" target="_blank" rel="noopener" data-i18n="cta.update">Update channel</a>
       </div>
       <div class="dl-stats" id="dl-stats" aria-live="polite">
-        <p class="dl-total" id="dl-total" data-raw="0">…</p>
-        <p class="dl-message" id="dl-message">در حال خواندن تعداد دانلود…</p>
-        <p class="dl-sub" id="dl-sub">شمارنده زنده از سرور بروزرسانی</p>
-        <p class="dl-tagline" id="dl-tagline">
-          اپ کاملاً مستقل — رایگان، بدون تبلیغ، فقط برای لذت شنیدن بهترین موسیقی.
+        <div class="stat-grid">
+          <div class="stat-card">
+            <p class="dl-total" id="dl-total" data-raw="0">…</p>
+            <p class="dl-message" id="dl-message" data-i18n="stats.downloadsLoading">Loading download count…</p>
+            <p class="dl-sub" id="dl-sub" data-i18n="stats.downloadsSub">Live download counter</p>
+          </div>
+          <div class="stat-card">
+            <p class="dl-total visit" id="visit-total" data-raw="0">…</p>
+            <p class="dl-message" id="visit-message" data-i18n="stats.visitsLoading">Loading page views…</p>
+            <p class="dl-sub" id="visit-sub" data-i18n="stats.visitsSub">Live page views</p>
+          </div>
+        </div>
+        <p class="dl-tagline" id="dl-tagline" data-i18n="stats.tagline">
+          Fully independent — free, ad-free, built only for enjoying great music.
         </p>
       </div>
-      <p class="meta" id="version-line">در حال خواندن نسخه…</p>
+      <p class="meta" id="version-line" data-i18n="hero.versionLoading">Reading version…</p>
     </section>
 
     <section class="demo" id="demo">
-      <h2>پیش‌نمایش شماتیک</h2>
-      <p class="demo-lead">نمای ساده از چند صفحهٔ اصلی — بدون اسکرین‌شات واقعی، فقط حس UI.</p>
+      <h2 data-i18n="demo.title">Schematic preview</h2>
+      <p class="demo-lead" data-i18n="demo.lead">A simple look at main screens — not real screenshots, just the UI feel.</p>
       <div class="demo-rail">
-        <!-- Library -->
         <figure class="demo-card">
           <div class="phone" aria-hidden="true">
             <div class="phone-notch"></div>
             <div class="screen screen-lib">
               <div class="s-brand">PLAYMOOD</div>
-              <div class="s-tabs">
-                <span class="on">خانه</span><span>آهنگ‌ها</span><span>سبک‌ها</span>
-              </div>
+              <div class="s-tabs"><span class="on">Home</span><span>Songs</span><span>Genres</span></div>
               <div class="s-search"></div>
-              <div class="s-hub">
-                <i></i><i></i><i></i>
-              </div>
+              <div class="s-hub"><i></i><i></i><i></i></div>
               <div class="s-row"><b></b><span></span></div>
               <div class="s-row"><b></b><span></span></div>
               <div class="s-row active"><b></b><span></span></div>
-              <div class="s-mini">
-                <div class="art"></div>
-                <div class="meta-l"><em></em><i></i></div>
-                <div class="play"></div>
-              </div>
+              <div class="s-mini"><div class="art"></div><div class="meta-l"><em></em><i></i></div><div class="play"></div></div>
             </div>
           </div>
           <figcaption>
-            <strong>کتابخانه</strong>
-            <span>خانه · هاب‌ها · مینی‌پلیر</span>
+            <strong data-i18n="demo.libTitle">Library</strong>
+            <span data-i18n="demo.libSub">Home · hubs · mini player</span>
           </figcaption>
         </figure>
 
-        <!-- Now Playing -->
         <figure class="demo-card">
           <div class="phone" aria-hidden="true">
             <div class="phone-notch"></div>
@@ -94,18 +98,15 @@
               <div class="s-title"></div>
               <div class="s-artist"></div>
               <div class="s-seek"><i></i></div>
-              <div class="s-transport">
-                <span></span><span class="big"></span><span></span>
-              </div>
+              <div class="s-transport"><span></span><span class="big"></span><span></span></div>
             </div>
           </div>
           <figcaption>
-            <strong>در حال پخش</strong>
-            <span>کاور بزرگ · کنترل‌ها</span>
+            <strong data-i18n="demo.npTitle">Now Playing</strong>
+            <span data-i18n="demo.npSub">Large cover · controls</span>
           </figcaption>
         </figure>
 
-        <!-- Party / Path -->
         <figure class="demo-card">
           <div class="phone" aria-hidden="true">
             <div class="phone-notch"></div>
@@ -116,23 +117,22 @@
                 <div class="pin-digits">4 8 2 1</div>
                 <div class="pin-dots"><i></i><i></i><i></i><i></i></div>
               </div>
-              <div class="s-chip">همان وای‌فای · صف مشترک</div>
+              <div class="s-chip">Same Wi‑Fi · shared queue</div>
               <div class="s-row slim"><b></b><span></span></div>
               <div class="s-row slim"><b></b><span></span></div>
             </div>
           </div>
           <figcaption>
-            <strong>مهمانی</strong>
-            <span>صف چندموبایل روی LAN</span>
+            <strong data-i18n="demo.partyTitle">Party</strong>
+            <span data-i18n="demo.partySub">Multi-phone queue on LAN</span>
           </figcaption>
         </figure>
 
-        <!-- TV -->
         <figure class="demo-card wide">
           <div class="tv" aria-hidden="true">
             <div class="tv-bezel">
               <div class="screen screen-tv">
-                <div class="tv-tabs"><span>جفت‌سازی</span><span class="on">مرور</span><span>پخش</span></div>
+                <div class="tv-tabs"><span>Pair</span><span class="on">Browse</span><span>Now</span></div>
                 <div class="tv-body">
                   <div class="tv-rail">
                     <div class="tv-cover"></div>
@@ -155,117 +155,110 @@
           </figcaption>
         </figure>
 
-        <!-- Car -->
         <figure class="demo-card wide">
           <div class="car" aria-hidden="true">
             <div class="screen screen-car">
               <div class="car-brand">PLAYMOOD · CAR</div>
               <div class="car-title"></div>
               <div class="car-sub"></div>
-              <div class="car-transport">
-                <span></span><span class="big"></span><span></span>
-              </div>
-              <div class="car-next">
-                <div class="chip"></div>
-                <div class="chip"></div>
-                <div class="chip"></div>
-              </div>
+              <div class="car-transport"><span></span><span class="big"></span><span></span></div>
+              <div class="car-next"><div class="chip"></div><div class="chip"></div><div class="chip"></div></div>
             </div>
           </div>
           <figcaption>
-            <strong>حالت خودرو</strong>
-            <span>دکمه‌های بزرگ · صف بعدی</span>
+            <strong data-i18n="demo.carTitle">Car mode</strong>
+            <span data-i18n="demo.carSub">Large buttons · up next</span>
           </figcaption>
         </figure>
       </div>
     </section>
 
     <section class="features" id="features">
-      <h2>چرا PlayMood؟</h2>
+      <h2 data-i18n="features.title">Why PlayMood?</h2>
       <div class="grid">
         <article>
-          <h3>کتابخانه محلی</h3>
-          <p>اسکن MediaStore، کش سریع، مخفی‌سازی آهنگ، ادامه از آخرین پخش.</p>
+          <h3 data-i18n="features.f1t">Local library</h3>
+          <p data-i18n="features.f1p">MediaStore scan, fast cache, hide tracks, resume from last play.</p>
         </article>
         <article>
-          <h3>تم تیره RTL</h3>
-          <p>فارسی، انگلیسی و عربی — با جهت راست‌به‌چپ واقعی.</p>
+          <h3 data-i18n="features.f2t">Dark RTL UI</h3>
+          <p data-i18n="features.f2p">English, فارسی, and العربية — with real right-to-left layout.</p>
         </article>
         <article>
-          <h3>Party و TV Sync</h3>
-          <p>صف مشترک روی همان وای‌فای؛ جفت‌سازی با PIN روی تلویزیون.</p>
+          <h3 data-i18n="features.f3t">Party & TV sync</h3>
+          <p data-i18n="features.f3p">Shared queue on the same Wi‑Fi; PIN pairing with PlayMood TV.</p>
         </article>
         <article>
-          <h3>Car و Android Auto</h3>
-          <p>دکمه‌های بزرگ، صف بعدی، مرور کتابخانه از داشبورد خودرو.</p>
+          <h3 data-i18n="features.f4t">Car & Android Auto</h3>
+          <p data-i18n="features.f4p">Large buttons, up-next queue, library browse from the dashboard.</p>
         </article>
         <article>
-          <h3>Smart Sound</h3>
-          <p>پروفایل صوتی و اکولایزر متناسب با دستگاه و ترک.</p>
+          <h3 data-i18n="features.f5t">Smart Sound</h3>
+          <p data-i18n="features.f5p">Audio profiles and EQ that adapt to device and track.</p>
         </article>
         <article>
-          <h3>بدون فروشگاه اجباری</h3>
-          <p>نصب مستقیم sideload با بروزرسانی امن از کانال اختصاصی.</p>
+          <h3 data-i18n="features.f6t">No store lock-in</h3>
+          <p data-i18n="features.f6p">Direct sideload install with secure updates from a private channel.</p>
         </article>
       </div>
     </section>
 
     <section class="products" id="products">
-      <h2>سه محصول، یک هسته</h2>
+      <h2 data-i18n="products.title">Three products, one core</h2>
       <div class="cards">
         <article>
           <span class="pill">Mobile</span>
           <h3>PlayMood</h3>
-          <p>اپ اصلی گوشی — کتابخانه، Now Playing، Path Mode، تنظیمات.</p>
+          <p data-i18n="products.mobile">Main phone app — library, Now Playing, Path Mode, settings.</p>
           <p class="pkg">com.melody.player</p>
-          <a class="btn small" id="dl-mobile" href="downloads/playmood-mobile-latest.apk">دانلود APK</a>
+          <a class="btn small" id="dl-mobile" href="downloads/playmood-mobile-latest.apk" data-i18n="cta.apk">Download APK</a>
         </article>
         <article>
           <span class="pill">TV</span>
           <h3>PlayMood TV</h3>
-          <p>لانچر Leanback — Pair / Browse / Now با ریموت و فوکوس D-pad.</p>
+          <p data-i18n="products.tv">Leanback launcher — Pair / Browse / Now with remote & D-pad focus.</p>
           <p class="pkg">com.playmood.tv · v0.2.0</p>
-          <a class="btn small" id="dl-tv" href="downloads/playmood-tv-latest.apk">دانلود APK</a>
+          <a class="btn small" id="dl-tv" href="downloads/playmood-tv-latest.apk" data-i18n="cta.apk">Download APK</a>
         </article>
         <article>
           <span class="pill">Car</span>
           <h3>PlayMood Car</h3>
-          <p>حالت افقی + MediaLibrary برای Android Auto.</p>
+          <p data-i18n="products.car">Landscape mode + MediaLibrary for Android Auto.</p>
           <p class="pkg">com.playmood.car · v0.2.0</p>
-          <a class="btn small" id="dl-car" href="downloads/playmood-car-latest.apk">دانلود APK</a>
+          <a class="btn small" id="dl-car" href="downloads/playmood-car-latest.apk" data-i18n="cta.apk">Download APK</a>
         </article>
       </div>
     </section>
 
     <section class="install" id="about">
-      <h2>استقلال PlayMood</h2>
+      <h2 data-i18n="about.title">Independent by design</h2>
       <ol>
-        <li>این اپ از سیاست‌های Google Play یا هیچ ارگان محدودکننده‌ای پیروی نمی‌کند.</li>
-        <li>کاملاً مستقل است؛ هدف فقط لذت داشتن یک اپ رایگان برای شنیدن بهترین موسیقی بدون تبلیغ است.</li>
-        <li>پس از استفاده از این اپ نهایت لذت را ببرید.</li>
+        <li data-i18n="about.l1">PlayMood does not follow Google Play or any restricting store policy.</li>
+        <li data-i18n="about.l2">It is fully independent — made only for free, ad-free listening.</li>
+        <li data-i18n="about.l3">Enjoy it to the fullest.</li>
       </ol>
     </section>
 
     <section class="install" id="party-help">
-      <h2>مهمانی (Party) در برابر همگام TV</h2>
+      <h2 data-i18n="party.title">Party vs TV sync</h2>
       <ol>
-        <li><strong>مهمانی:</strong> دو یا چند گوشی روی یک Wi‑Fi — نیازی به تلویزیون نیست.</li>
-        <li>میزبان روی Home → Party → Start party؛ مهمان همان PIN چهاررقمی را Join می‌کند.</li>
-        <li><strong>TV sync:</strong> کارت جدا روی Home است؛ PIN روی صفحهٔ تلویزیون با اپ PlayMood TV.</li>
-        <li>اگر روتر «AP isolation» دارد، گوشی‌ها همدیگر را پیدا نمی‌کنند.</li>
+        <li data-i18n-html="party.l1"><strong>Party:</strong> two or more phones on one Wi‑Fi — no TV required.</li>
+        <li data-i18n="party.l2">Host starts Party on Home; guests join with the same 4-digit PIN.</li>
+        <li data-i18n-html="party.l3"><strong>TV sync:</strong> separate Home card; PIN shown on PlayMood TV.</li>
+        <li data-i18n="party.l4">If the router uses AP isolation, phones cannot discover each other.</li>
       </ol>
     </section>
 
     <section class="install">
-      <h2>نصب sideload</h2>
+      <h2 data-i18n="install.title">Sideload install</h2>
       <ol>
-        <li>از تنظیمات اندروید، نصب از منابع ناشناس را برای مرورگر/فایل‌منیجر مجاز کنید.</li>
-        <li>APK را دانلود و نصب کنید.</li>
-        <li>دسترسی صوت (<code>READ_MEDIA_AUDIO</code>) را بدهید.</li>
-        <li>بروزرسانی‌های بعدی از داخل اپ یا همین صفحه می‌آید.</li>
+        <li data-i18n="install.l1">Allow install from unknown sources for your browser/file manager.</li>
+        <li data-i18n="install.l2">Download and install the APK.</li>
+        <li data-i18n-html="install.l3">Grant audio permission (<code>READ_MEDIA_AUDIO</code>).</li>
+        <li data-i18n="install.l4">Later updates arrive inside the app or from this page.</li>
       </ol>
       <p class="note">
-        کانال بروزرسانی:
+        <span data-i18n="install.channel">Update channel:</span>
         <a href="https://hamtaloans.com/mldy-update/" target="_blank" rel="noopener">hamtaloans.com/mldy-update</a>
       </p>
     </section>
@@ -278,12 +271,13 @@
     </div>
     <div class="links">
       <a href="https://github.com/megavegas/playmood-site">GitHub</a>
-      <a href="#demo">پیش‌نمایش</a>
-      <a href="#download">دانلود</a>
+      <a href="#demo" data-i18n="nav.preview">Preview</a>
+      <a href="#download" data-i18n="nav.download">Download</a>
     </div>
-    <p class="copy">© PlayMood — ساخته‌شده برای شنیدن بدون حواس‌پرتی.</p>
+    <p class="copy" data-i18n="footer.copy">© PlayMood — built for listening without distraction.</p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
