@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1a4d2e" />
+  <meta name="description" content="میز ورق — سولیتر و اسپایدر آفلاین، بدون تبلیغ" />
+  <title>میز ورق — Card Table</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <style>
+    :root { --felt:#1a4d2e; --gold:#d4af37; --cream:#f5f0e1; --ink:#0f1419; --muted:#b8c9b0; }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      background: linear-gradient(165deg, #0d2818 0%, var(--felt) 42%, #0a1f12 100%);
+      color: var(--cream);
+      font-family: Tahoma, "Segoe UI", sans-serif;
+    }
+    .wrap { max-width: 520px; margin: 0 auto; padding: 28px 18px 56px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.2rem; color: var(--gold); }
+    .brand img { width: 44px; height: 44px; }
+    h1 { margin: 22px 0 10px; font-size: 1.65rem; line-height: 1.4; }
+    .lead { color: var(--muted); line-height: 1.85; margin-bottom: 20px; }
+    .felt {
+      height: 120px; border-radius: 16px; margin: 16px 0;
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 26px, rgba(255,255,255,.03) 27px),
+        linear-gradient(180deg, #2d6b45, #1a4d2e);
+      border: 1px solid rgba(255,255,255,.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; letter-spacing: .2em; opacity: .9;
+    }
+    .btn {
+      display: block; text-align: center; text-decoration: none; font-weight: 700;
+      padding: 14px 18px; border-radius: 12px; margin: 10px 0;
+    }
+    .primary { background: var(--gold); color: var(--ink); }
+    .ghost { background: rgba(0,0,0,.25); color: var(--cream); border: 1px solid rgba(255,255,255,.12); }
+    .card {
+      background: rgba(0,0,0,.28); border-radius: 14px; padding: 16px;
+      margin-top: 14px; line-height: 1.8; font-size: .95rem;
+    }
+    .card h2 { margin: 0 0 8px; font-size: 1rem; color: var(--gold); }
+    footer { margin-top: 24px; font-size: .82rem; color: var(--muted); text-align: center; }
+    footer a { color: var(--cream); }
+    #ver { font-size: .85rem; opacity: .7; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand"><img src="icon.svg" alt="" /><span>میز ورق</span></div>
+    <div class="felt" aria-hidden="true">♠ ♥ ♦ ♣</div>
+    <h1>سولیتر و اسپایدر — آفلاین</h1>
+    <p class="lead">بازی ورق کلاسیک بدون تبلیغ، بدون حساب، بدون اینترنت برای بازی. بروزرسانی اختیاری از همین سایت گیت‌هاب.</p>
+    <a class="btn primary" href="downloads/cardtable.apk" id="dl" download>دانلود APK اندروید</a>
+    <a class="btn ghost" href="privacy.html">حریم خصوصی</a>
+    <div class="card">
+      <h2>نصب</h2>
+      <ol>
+        <li>APK را دانلود و باز کن.</li>
+        <li>در صورت نیاز «نصب از منابع ناشناس» را برای مرورگر فعال کن.</li>
+        <li>بعد از نصب، از داخل اپ «بررسی بروزرسانی» هم می‌توانی بزنی.</li>
+      </ol>
+    </div>
+    <p id="ver"></p>
+    <footer>
+      <a href="https://github.com/megavegas/cardtable-site">ریپوی سایت</a>
+      · بدون سورس اپ
+    </footer>
+  </div>
+  <script>
+    fetch("version.json?t=" + Date.now()).then(r => r.json()).then(j => {
+      if (j.versionName) document.getElementById("ver").textContent = "نسخه " + j.versionName;
+    }).catch(() => {});
+  </script>
+</body>
+</html>
